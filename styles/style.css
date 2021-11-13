@@ -153,7 +153,7 @@ header .logo span {
   align-items: center;
   margin: 0 20px;
   gap: 32px;
-  color: #E8E8E8;
+  color: #e8e8e8;
 }
 
 .container .intro {
@@ -174,7 +174,7 @@ header .logo span {
   border-right: 2px solid var(--spotify-empty);
 }
 .intro .underlined {
-  color: #BBBFCA;
+  color: #bbbfca;
   font-weight: 600;
   font-size: 15px;
   position: relative;
@@ -321,12 +321,7 @@ body .magic-hover:hover {
   border-radius: 6px;
   font-size: 12px;
   background-color: #18181bc0;
-  background-image: linear-gradient(
-    30deg,
-    #18181bb0,
-    #18181bb4,
-    #18181baf
-  );
+  background-image: linear-gradient(30deg, #18181bb0, #18181bb4, #18181baf);
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.178);
   color: #fff;
   text-align: center;
@@ -474,15 +469,14 @@ body .magic-hover:hover {
 }
 
 @media (max-width: 400px) {
-
   header {
     flex-direction: column;
     gap: 40px;
   }
-  .container{
+  .container {
     gap: 50px;
   }
-  .my-blog{
+  .my-blog {
     background-color: var(--box);
   }
   .icons {
@@ -493,18 +487,15 @@ body .magic-hover:hover {
     background-color: var(--box);
     color: var(--text);
   }
-  footer{
+  footer {
     padding: 20px;
   }
 }
 
-
-footer{
-
+footer {
   color: var(--spotify-empty);
   font-size: 12px;
   font-weight: 600;
   margin-top: auto;
   margin-bottom: 25px;
-  
 }
