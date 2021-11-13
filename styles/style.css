@@ -473,14 +473,24 @@ body .magic-hover:hover {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
+
   header {
     flex-direction: column;
     gap: 20px;
   }
-
+  .container{
+    gap: 50px;
+  }
+  .my-blog{
+    background-color: var(--box);
+  }
   .icons {
     flex-wrap: wrap;
+    gap: 10px;
+  }
+  .icons svg {
+    background-color: var(--box);
   }
 }
 

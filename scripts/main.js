@@ -28,12 +28,16 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const options = {
-	"cursorOuter": "circle-basic",
-	"hoverEffect": "pointer-overlay",
-	"hoverItemMove": false,
-	"defaultCursor": false,
-	"outerWidth": 30,
-	"outerHeight": 30
-};
-magicMouse(options);
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  
+}else{
+  const options = {
+    "cursorOuter": "circle-basic",
+    "hoverEffect": "pointer-overlay",
+    "hoverItemMove": false,
+    "defaultCursor": false,
+    "outerWidth": 30,
+    "outerHeight": 30
+  };
+  magicMouse(options);
+}
