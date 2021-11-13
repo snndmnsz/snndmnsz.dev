@@ -112,8 +112,8 @@ header .logo span {
 .my-blog:hover {
   background: rgba(24, 24, 27, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -238,10 +238,11 @@ header .logo span {
 
 .icons svg:hover {
   color: var(--text);
+
   background: rgba(24, 24, 27, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -275,7 +276,7 @@ body #magicPointer {
   transition: background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s;
 }
 body #magicPointer.is-hover {
-  background: red;
+  background: var(--spotify-empty);
 }
 body #magicPointer.pointer-blur {
   height: 50px;
