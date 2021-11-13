@@ -176,7 +176,7 @@ header .logo span {
 .intro .underlined {
   color: var(--unhover-bg);
   font-weight: 600;
-  font-size: 17px;
+  font-size: 16px;
   position: relative;
   cursor: none;
 }
@@ -317,7 +317,7 @@ body .magic-hover:hover {
   width: max-content;
   width: -moz-max-content;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   background-color: #18181bc0;
   background-image: linear-gradient(
     30deg,
