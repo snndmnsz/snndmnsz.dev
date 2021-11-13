@@ -477,7 +477,7 @@ body .magic-hover:hover {
 
   header {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
   }
   .container{
     gap: 50px;
@@ -491,6 +491,10 @@ body .magic-hover:hover {
   }
   .icons svg {
     background-color: var(--box);
+    color: var(--text);
+  }
+  footer{
+    padding: 20px;
   }
 }
 
