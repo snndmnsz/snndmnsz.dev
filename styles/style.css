@@ -130,7 +130,6 @@ header .logo span {
   justify-content: center;
   align-items: center;
   margin-bottom: 45px;
-
   gap: 7px;
   color: var(--spotify-empty);
 }
@@ -147,17 +146,18 @@ header .logo span {
 }
 
 .container {
-  max-width: 535px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 20px;
   gap: 32px;
+  color: #E8E8E8;
 }
 
 .container .intro {
-  font-size: 16px;
+  font-size: 15px;
   text-align: start;
   font-weight: 400;
   letter-spacing: 1.1px;
@@ -174,9 +174,9 @@ header .logo span {
   border-right: 2px solid var(--spotify-empty);
 }
 .intro .underlined {
-  color: var(--unhover-bg);
+  color: #BBBFCA;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   position: relative;
   cursor: none;
 }
@@ -204,10 +204,12 @@ header .logo span {
 }
 
 .intro .main-header {
-  font-size: 18px;
+  font-size: 16px;
+  letter-spacing: 2px;
   font-weight: 500;
 }
 .intro .main-header .name {
+  color: var(--text);
   font-size: 18px;
   font-weight: 600;
 }
@@ -221,9 +223,9 @@ header .logo span {
 }
 .icons svg {
   color: var(--spotify-empty);
-  width: 48px;
-  height: 48px;
-  padding: 13px;
+  width: 45px;
+  height: 45px;
+  padding: 12px;
   transition: 0.3s;
   cursor: none;
   border-radius: 5px;
