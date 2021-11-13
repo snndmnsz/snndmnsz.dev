@@ -151,7 +151,7 @@ header .logo span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 20px;
+  margin: 0 10px;
   gap: 32px;
   color: #e8e8e8;
 }
@@ -464,7 +464,7 @@ body .magic-hover:hover {
     flex-wrap: wrap;
   }
   .container {
-    margin: 0 70px;
+    margin: 0 35px;
   }
 }
 
