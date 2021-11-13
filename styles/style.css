@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --background: #08080a;
+  --text: #ffffff;
+  --box: #18181b;
+  --icon: #e5e5e5;
+  --spotify-empty: #7c7c7c;
+  --unhover-bg: #b5b5b7;
+}
+
+body {
+  background-color: var(--background);
+  width: 100%;
+  height: 100vh;
+  color: var(--text);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* intro */
+
+.intro-opening {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  transition: 1s;
+}
+
+.logo-header {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #18181b;
+}
+
+.logo-opening {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 17px;
+  bottom: -20px;
+  opacity: 0;
+}
+.logo-opening.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+.logo-opening.fade {
+  bottom: 200px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+/*  */
+
+header {
+  width: 60%;
+  /* position: relative;
+  top: 0;
+  left: 0; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 10px;
+}
+header .logo {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+header .logo span {
+  color: var(--spotify-empty);
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+.my-blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  color: var(--unhover-bg);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 120px;
+  height: 45px;
+}
+.my-blog:hover {
+  background-color: var(--box);
+}
+
+.my-blog p {
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.my-blog svg {
+  color: var(--unhover-bg);
+  width: 18px;
+  height: 18px;
+}
+
+.spotify {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 45px;
+
+  gap: 7px;
+  color: var(--spotify-empty);
+}
+
+.spotify svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--spotify-empty);
+}
+
+.spotify p {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.container {
+  max-width: 535px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  gap: 32px;
+}
+
+.container .intro {
+  font-size: 16px;
+  text-align: start;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  line-height: 32px;
+}
+.intro .cse {
+  z-index: 0;
+  padding: 1.2px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+.intro .cse:hover {
+  border-left: 2px solid var(--spotify-empty);
+  border-right: 2px solid var(--spotify-empty);
+}
+.intro .underlined {
+  color: var(--unhover-bg);
+  font-weight: 600;
+  font-size: 17px;
+  position: relative;
+  cursor: none;
+}
+
+.intro .underlined::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.intro .underlined:hover::before {
+  transform: scaleX(1);
+}
+
+.intro .underlined:hover {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.intro .main-header {
+  font-size: 18px;
+  font-weight: 500;
+}
+.intro .main-header .name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons svg {
+  color: var(--spotify-empty);
+  width: 48px;
+  height: 48px;
+  padding: 13px;
+  transition: 0.3s;
+  cursor: none;
+  border-radius: 5px;
+}
+
+.icons svg:hover {
+  color: var(--text);
+  background-color: var(--box);
+}
+
+/*  MOUSE */
+body #magicMouseCursor {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  transition: transform 0.07s, width 0.3s, height 0.3s;
+  pointer-events: none;
+}
+body #magicMouseCursor.cursor-square {
+  border-radius: 0;
+}
+
+body #magicPointer {
+  height: 5px;
+  width: 5px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s;
+}
+body #magicPointer.is-hover {
+  background: red;
+}
+body #magicPointer.pointer-blur {
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 15px -5px white;
+}
+body #magicPointer.pointer-overlay {
+  height: 50px;
+  width: 50px;
+  mix-blend-mode: difference;
+  box-shadow: 0px 0px 15px -5px white;
+}
+
+body .magic-hover {
+  transition: all 0.2s;
+}
+body .magic-hover:hover {
+  cursor: none;
+}
+
+/*  */
+
+/*  TOOL TIPS*/
+
+[data-tooltip] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Positioning and visibility settings of the tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  bottom: calc(100% + 5px); /* 5px is the size of the arrow */
+  pointer-events: none;
+  transition: 0.2s;
+  will-change: transform;
+}
+
+/* The actual tooltip with a dynamic width */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  padding: 10px 18px;
+  min-width: 50px;
+  max-width: 300px;
+  width: max-content;
+  width: -moz-max-content;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #18181bc0;
+  background-image: linear-gradient(
+    30deg,
+    #18181bb0,
+    #18181bb4,
+    #18181baf
+  );
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.178);
+  color: #fff;
+  text-align: center;
+  white-space: pre-wrap;
+  transform: translate(-50%, -5px) scale(0.5);
+}
+
+/* Tooltip arrow */
+[data-tooltip]:after {
+  content: "";
+  border-style: solid;
+  border-width: 5px 5px 0px 5px; /* CSS triangle */
+  border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
+  transition-duration: 0s; /* If the mouse leaves the element, 
+                              the transition effects for the 
+                              tooltip arrow are "turned off" */
+  transform-origin: top; /* Orientation setting for the
+                              slide-down effect */
+  transform: translateX(-50%) scaleY(0);
+}
+
+/* Tooltip becomes visible at hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+/* Scales from 0.5 to 1 -> grow effect */
+[data-tooltip]:hover:before {
+  transition-delay: 0.3s;
+  transform: translate(-50%, -5px) scale(1);
+}
+/* 
+  Arrow slide down effect only on mouseenter (NOT on mouseleave)
+*/
+[data-tooltip]:hover:after {
+  transition-delay: 0.5s; /* Starting after the grow effect */
+  transition-duration: 0.2s;
+  transform: translateX(-50%) scaleY(1);
+}
+/*
+  That's it for the basic tooltip.
+
+  If you want some adjustability
+  here are some orientation settings you can use:
+*/
+
+/* LEFT */
+/* Tooltip + arrow */
+[data-tooltip-location="left"]:before,
+[data-tooltip-location="left"]:after {
+  left: auto;
+  right: calc(100% + 5px);
+  bottom: 50%;
+}
+
+/* Tooltip */
+[data-tooltip-location="left"]:before {
+  transform: translate(-5px, 50%) scale(0.5);
+}
+[data-tooltip-location="left"]:hover:before {
+  transform: translate(-5px, 50%) scale(1);
+}
+
+/* Arrow */
+[data-tooltip-location="left"]:after {
+  border-width: 5px 0px 5px 5px;
+  border-color: transparent transparent transparent rgba(55, 64, 70, 0.9);
+  transform-origin: left;
+  transform: translateY(50%) scaleX(0);
+}
+[data-tooltip-location="left"]:hover:after {
+  transform: translateY(50%) scaleX(1);
+}
+
+/* RIGHT */
+[data-tooltip-location="right"]:before,
+[data-tooltip-location="right"]:after {
+  left: calc(100% + 5px);
+  bottom: 50%;
+}
+
+[data-tooltip-location="right"]:before {
+  transform: translate(5px, 50%) scale(0.5);
+}
+[data-tooltip-location="right"]:hover:before {
+  transform: translate(5px, 50%) scale(1);
+}
+
+[data-tooltip-location="right"]:after {
+  border-width: 5px 5px 5px 0px;
+  border-color: transparent rgba(55, 64, 70, 0.9) transparent transparent;
+  transform-origin: right;
+  transform: translateY(50%) scaleX(0);
+}
+[data-tooltip-location="right"]:hover:after {
+  transform: translateY(50%) scaleX(1);
+}
+
+/* BOTTOM */
+[data-tooltip-location="bottom"]:before,
+[data-tooltip-location="bottom"]:after {
+  top: calc(100% + 5px);
+  bottom: auto;
+}
+
+[data-tooltip-location="bottom"]:before {
+  transform: translate(-50%, 5px) scale(0.5);
+}
+[data-tooltip-location="bottom"]:hover:before {
+  transform: translate(-50%, 5px) scale(1);
+}
+
+[data-tooltip-location="bottom"]:after {
+  border-width: 0px 5px 5px 5px;
+  border-color: transparent transparent rgba(55, 64, 70, 0.9) transparent;
+  transform-origin: bottom;
+}
+
+/*  */
+
+@media (min-width: 1400px) {
+  header {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    width: 70%;
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    width: 80%;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+  }
+  .container {
+    margin: 0 70px;
+  }
+}
+
+@media (max-width: 350px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+  }
+}
+
+
+footer{
+
+  color: var(--spotify-empty);
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: 25px;
+  
+}
