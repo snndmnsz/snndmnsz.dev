@@ -496,7 +496,10 @@ body .magic-hover:hover {
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
   .icons {
+    -ms-box-orient: horizontal;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
   .icons svg {
@@ -509,7 +512,8 @@ body .magic-hover:hover {
     color: var(--text);
   }
   footer {
-    padding: 20px;
+    padding: 25px;
+    font-size: 9px !important;
   }
 }
 
