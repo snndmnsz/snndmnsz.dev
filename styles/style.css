@@ -238,7 +238,6 @@ header .logo span {
 
 .icons svg:hover {
   color: var(--text);
-
   background: rgba(24, 24, 27, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1.5px);
@@ -261,7 +260,8 @@ body #magicMouseCursor {
   pointer-events: none;
 }
 body #magicMouseCursor.cursor-square {
-  border-radius: 0;
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 0.438);
 }
 
 body #magicPointer {
@@ -488,14 +488,24 @@ body .magic-hover:hover {
     gap: 50px;
   }
   .my-blog {
-    background-color: var(--box);
+    background: rgba(24, 24, 27, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.185);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
   .icons {
     flex-wrap: wrap;
     gap: 10px;
   }
   .icons svg {
-    background-color: var(--box);
+    background: rgba(24, 24, 27, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.185);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: var(--text);
   }
   footer {
@@ -505,10 +515,10 @@ body .magic-hover:hover {
 
 footer {
   color: var(--spotify-empty);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 500;
   margin-top: auto;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 /*  */
