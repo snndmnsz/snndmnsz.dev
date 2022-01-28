@@ -1,5 +1,3 @@
-import { magicMouse } from "./magic_mouse.js";
-
 let intro = document.querySelector(".intro-opening");
 let logo = document.querySelector(".logo-header");
 let logoSpan = document.querySelectorAll(".logo-opening");
@@ -26,23 +24,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 2300);
   });
 });
-
-if (
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
-) {
-} else {
-  const options = {
-    cursorOuter: "circle-basic",
-    hoverEffect: "circle-move",
-    hoverItemMove: false,
-    defaultCursor: false,
-    outerWidth: 30,
-    outerHeight: 30,
-  };
-  magicMouse(options);
-}
 
 particlesJS("particles-js", {
   particles: {
